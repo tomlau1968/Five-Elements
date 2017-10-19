@@ -1,0 +1,292 @@
+@import url(//fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url(//fonts.googleapis.com/earlyaccess/cwtexhei.css);
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexming.css);
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+@import url('https://fonts.googleapis.com/css?family=Rozha+One');
+
+
+html {
+  box-sizing: border-box;
+  background:white;
+  font-family:"cwTeXMing", "Cutive Mono", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+}
+body {
+  margin: 0;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.panels {
+  min-height:100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  background:#white;
+  box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+  color:white;
+  text-align: center;
+  align-items:center;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.2s;
+  font-size: 20px;
+  background-size:cover;
+  background-position:center;
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+@-webkit-keyframes typing { from { width: 0; } }
+/*@-webkit-keyframes blink-caret { 5% { border-color: transparent; } }*/
+
+
+.elements {
+  position:absolute;left:50%;margin-left:-25%;top:40%;margin-top:-10%;width:80%;height:10%;
+  z-index: 1;
+  text-align: center;
+  font-family:"cwTeXMing", "Cutive Mono", sans-serif;
+  font-size: 1em;
+
+  	/*border-right: .01em solid black;*/
+  	width: calc(0.55em * 3);
+  	width: 50%;
+  	white-space: nowrap;
+  	overflow: hidden;
+  	-webkit-animation: typing 3s steps(14, end),
+  	           blink-caret .2s step-end infinite alternate;
+
+}
+
+
+
+.panel1 { background-image:url(../images/174835298.jpg); background-size: 100% auto; background-repeat: no-repeat;}
+.panel2 { background-image:url(../images/480050017.jpg); background-size: 100% auto; background-repeat: no-repeat;}
+.panel3 { background-image:url(../images/598964172.jpg); background-size: 100% auto; background-repeat: no-repeat;}
+.panel4 { background-image:url(../images/465102948.jpg); background-size: 100% auto; background-repeat: no-repeat;}
+.panel5 { background-image:url(../images/505757564.jpg); background-size: 100% auto; background-repeat: no-repeat;}
+
+
+/* Flex Items */
+.panel > * {
+  margin:0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel > *:first-child { transform: translateY(-100%); }
+.panel.open-active > *:first-child { transform: translateY(0); }
+.panel > *:last-child { transform: translateY(100%); }
+.panel.open-active > *:last-child { transform: translateY(0); }
+
+.panel p {
+  /*text-transform: uppercase;*/
+  font-family:"cwTeXMing", sans-serif;
+  text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 0.6em;
+}
+.panel p:nth-child(2) {
+  font-size: 4em;
+}
+
+.panel.open {
+  flex: 3;
+  font-size:45px;
+}
+
+
+.arrow {
+  position: fixed;
+  top: 45em;
+  left: 48%;
+  background-image: url(../images/arrow.svg);
+  z-index: -1;
+  display: inline-block;
+  height: 20em;
+  width: 25em;
+  background-size: 10%;
+  background-repeat: no-repeat;
+}
+
+.textmetal {
+  display: inline-block;
+  height: 20em;
+  width: 25em;
+  position: absolute;
+  color: black;
+  left: 47em;
+  top: 50em;
+  z-index: 1;
+}
+
+.metalword {
+  height: 50em;
+  width: 48em;
+  background-image: url(../images/metal.svg);
+  background-size: 75%;
+  position: relative;
+  background-repeat: no-repeat;
+  left: 5em;
+  z-index: 1;
+}
+
+.metalsidetext {
+  background-image: url(../images/goldpoem.svg);
+  background-repeat: no-repeat;
+  width: 40em;
+  height: 10em;
+  position: relative;
+  left: 37em;
+  top: -11em;
+  background-size: 170%;
+  z-index: 4;
+  /*background-color: grey;*/
+}
+
+.metalsidetexteng {
+  font-size: 1em;
+  width: 7em;
+  height: 7em;
+  position: relative;
+  left: 12em;
+  top: -5em;
+  font-family:"Cutive Mono", sans-serif;
+  z-index: 1;
+}
+
+.gold {
+  width: auto;
+  background-image: url(../images/174835298.png);
+  position: relative;
+  height: 65em;
+  background-size: 28%;
+  background-repeat: no-repeat;
+  left: 18em;
+  top: 1em;
+  z-index: 2
+}
+
+.woodlog {
+  background-image: url(../images/480050017.png);
+  position: relative;
+  width: 107em;
+  height: 45em;
+  background-size: 29%;
+  background-repeat: no-repeat;
+  left: -27em;
+  top: 30em;
+  z-index: 2
+}
+
+.woodword {
+  background-image: url(../images/wood.svg);
+  background-repeat: no-repeat;
+  position: relative;
+  left: 46em;
+  top: -70em;
+  width: 30em;
+  height: 100em;
+  z-index: 3;
+  background-size: 60%;
+
+}
+
+.textwood {
+  display: inline-block;
+  height: 20em;
+  width: 25em;
+  position: absolute;
+  color: black;
+  left: 10em;
+  top: 137em;
+  z-index: 1;
+}
+
+#watermovie {
+  background-repeat: no-repeat;
+  position: relative;
+  left: 40em;
+  top: -45em;
+  z-index: 5;
+  width: 80em;
+  height: 70em;
+  background-size: 20%;
+  transform: translate(-50%, -50%);
+
+}
+
+.waterword {
+  background-image: url(../images/waterword.svg);
+  background-repeat: no-repeat;
+  position: relative;
+  left: 26em;
+  top: -175em;
+  width: 50em;
+  height: 90em;
+  z-index: 5;
+  background-size: 60%;
+}
+
+
+.watertext {
+  font-size: 1em;
+  width: 40em;
+  height: 7em;
+  position: relative;
+  left: 12em;
+  top: -182em;
+  font-family:"Cutive Mono", sans-serif;
+  z-index: 1;
+}
+
+
+.fireimage {
+  background-image: url(../images/fire.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -53%;
+  top: 560%;
+  width: 150%;
+  height: 120%;
+  z-index: 4;
+  background-size: 25%;
+}
+
+
+
+.fireword {
+  background-image: url(../images/fireword.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 40%;
+  top: 580%;
+  width: 47%;
+  height: 80%;
+  z-index: 5;
+  background-size: 45%;
+
+}
+
+.textfire {
+  display: inline-block;
+  height: 40%;
+  width: 25%;
+  position: absolute;
+  color: black;
+  left: 8%;
+  top: 565%;
+  z-index: 3;
+}
